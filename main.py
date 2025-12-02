@@ -160,7 +160,7 @@ def draw(fire):
     #         for tree in Tree.trees:
     #             tree.tick()
     for tree in Tree.trees:
-        pygame.draw.circle(screen, (255-round(255*tree.strucInteg), round(255*tree.strucInteg), 0), (tree.position[0] * scale, tree.position[1] * scale), scale/2, 0)
+        pygame.draw.circle(screen, ((255-round(255*tree.strucInteg))*tree.onFire, round(255*tree.strucInteg), 0), (tree.position[0] * scale, tree.position[1] * scale), scale/2, 0)
     pygame.display.update()
 
 running = True
