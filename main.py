@@ -120,7 +120,7 @@ def draw(fire):
     pygame.draw.rect(screen, (0, 0, 0), (0, 0, size[0] * scale, size[1] * scale))
     pygame.draw.rect(screen, (255, 255, 255), (0, bottom, size[0] * scale, bottomBar))
     soFarWidth = 5
-    textSurfaceDay = font.render(f'Day: {weather['season']['current']}', True, (0, 0, 0))
+    textSurfaceDay = font.render(f'Day: {weather["season"]["current"]}', True, (0, 0, 0))
     textRect = textSurfaceDay.get_rect()
     textRect.topleft = (soFarWidth, bottom + 5)
     soFarWidth += 100
