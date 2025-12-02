@@ -31,7 +31,7 @@ def sim(dir, f) -> list:
         v = [math.cos(d)/10, math.sin(d)/10]
         w = [math.cos(dir)*f/160, math.sin(dir)*f/160]
         pP = [0, 0]
-        while t < 3:
+        while t <= 3:
             t += 0.1
             v[0] += w[0]
             v[1] += w[1]
@@ -40,7 +40,7 @@ def sim(dir, f) -> list:
             if math.floor(p[0]+0.5) != pP[0] or math.floor(p[1]+0.5) != pP[1]:
                 pP[0] = math.floor(p[0]+0.5)
                 pP[1] = math.floor(p[1]+0.5)
-                grid[math.floor(p[0]+0.5)][math.floor(p[1]+0.5)].stats.append(1/(t*2/3+1))
+                grid[math.floor(p[0]+0.5)][math.floor(p[1]+0.5)].stats.append((3-t)/3)
     stats = []
     for i in grid:
         stats.append([])
