@@ -60,7 +60,7 @@ class Tree:
         this.position = (random.uniform(0, 1)*size[0], random.uniform(0, 1)*size[1])
         this.trees.append(this)
         this.onFire = False
-        this.strucInteg = 1
+        this.strucInteg = 0.025
         this.chunk = this.chunkToStr((0, 0))
         this.neighboringChunks = []
         for x in range(-1, 2):
